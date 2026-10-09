@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TTS CCTV</title>
+    <style>
+        :root {
+            --bg-color: #0b0f14;
+            --card-bg: #141b24;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #00e5ff;
+            --accent-green: #10b981;
+            --border: #1e293b;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+            border: 1px solid var(--accent-green);
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--accent);
+            padding-left: 10px;
+        }
+        p {
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+        ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            color: var(--text-main);
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background: rgba(0, 229, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+        }
+        .highlight-box strong {
+            color: var(--accent);
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">100% Private &amp; Local</span>
+            <h1>Privacy Policy for TTS CCTV</h1>
+            <div class="meta">
+                <strong>Application:</strong> TTS CCTV (<code>com.tts.cctv</code>)<br>
+                <strong>Developer:</strong> TTS (Taha &amp; Mufaddal)<br>
+                <strong>Last Updated:</strong> October 9, 2026
+            </div>
+        </header>
+
+        <div class="highlight-box">
+            <strong>Summary:</strong> The <strong>TTS CCTV</strong> application is designed with a strict zero-cloud, privacy-first architecture. We <strong>do not collect, store, transmit, or share</strong> any personal data, video feeds, or usage analytics. All surveillance video stays exclusively on your private local home network and camera memory card.
+        </div>
+
+        <h2>1. Information Collection and Use</h2>
+        <p>TTS CCTV does not collect any personal identification information (PII) or usage telemetry. Specifically:</p>
+        <ul>
+            <li><strong>No User Accounts:</strong> You do not need to register an account, sign in, or provide email addresses or phone numbers to use the app.</li>
+            <li><strong>No Analytics or Tracking:</strong> The application contains no third-party tracking libraries, advertising SDKs (such as AdMob), or telemetry frameworks.</li>
+            <li><strong>Zero Cloud Relays:</strong> The application communicates directly and exclusively with your own camera hardware over your local Wi-Fi network (LAN). Video streams and snapshots never pass through external cloud servers.</li>
+        </ul>
+
+        <h2>2. Device Permissions and How They Are Used</h2>
+        <p>The application requests only the minimum necessary Android system permissions required to operate your local camera hardware:</p>
+        <ul>
+            <li><strong>Bluetooth Permissions (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Used solely during initial device setup to discover nearby unconfigured camera nodes (<code>TTS-CCTV-XXXX</code>) via Bluetooth Low Energy (BLE) and send your chosen Wi-Fi credentials to the camera. The app uses the <code>neverForLocation</code> flag and does not track your physical location.</li>
+            <li><strong>Local Network &amp; Wi-Fi (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> Used exclusively to stream live video (MJPEG) and access recordings directly from the camera's local IP address on your private home router. No internet data transmission takes place.</li>
+            <li><strong>Media &amp; Storage (Optional):</strong> If you choose to manually save a screenshot or recorded surveillance clip to your mobile device, the app requires permission to write that file to your local device storage.</li>
+        </ul>
+
+        <h2>3. Storage of Video and Recordings</h2>
+        <p>All video recordings are saved locally onto the MicroSD card installed physically inside your camera node. The application accesses these recordings directly over the local network via HTTP. No video or metadata is uploaded to any remote server or third party.</p>
+
+        <h2>4. Security</h2>
+        <p>Your surveillance feeds remain isolated within your private local area network (LAN). Camera nodes support optional custom security passcodes (Owner Tokens) configured directly by you during setup to prevent unauthorized access on your local network.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Our application does not address or collect any data from anyone, including children under the age of 13. Since zero personal data is collected or processed, TTS CCTV is fully compliant with the Children's Online Privacy Protection Act (COPPA) and international privacy frameworks.</p>
+
+        <h2>6. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. Since the app is built on a local-first, zero-data collection foundation, any updates will continue to honor the zero-telemetry principle. Any changes will be posted on this page.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions or suggestions regarding this Privacy Policy, please feel free to reach out to us at:</p>
+        <p>
+            <strong>Developer:</strong> TTS Development Team<br>
+            <strong>Developers:</strong> Taha (+91 9870846524) &amp; Mufaddal (+91 8082259583)<br>
+            <strong>Email:</strong> <a href="mailto:udaipurwalamufaddal53@gmail.com">udaipurwalamufaddal53@gmail.com</a>
+        </p>
+
+        <footer>
+            &copy; 2026 TTS CCTV Surveillance Node. All rights reserved. Built with zero-cloud local security.
+        </footer>
+    </div>
+</body>
+</html>
